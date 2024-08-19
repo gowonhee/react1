@@ -1,0 +1,76 @@
+1. JSX Elements must be wrapped ~
+    - return문 안에 작성하는 요소는 반드시 하나의 부모요소로 감싸져 있어야한다.
+
+
+2. ~~ is not defined
+    - 변수, 함수, state를 선언하지 않았을 경우
+    - 필요한 기능을 import 하지 않은 경우 (useState, uesEffect .. efc)
+    - 오타났을 경우 (ex. num으로 선언했는데 nem으로 작성 한 경우 등등)
+
+3. export 'default' was not found in '경로'
+    - 경로 안에서 그 컴포넌트 찾을 수 없다.
+    - 파일이 없는 경우
+    - 파일은 있는데 export 가 안된경우
+    - export 를 하다가 오타가 난 경우
+    - 실수로 파일을 소문자로 만들었다가 대문자로 이름을 바꾸는 경우
+      리액트 프로젝트가 일시적으로 파일을 인지하지 못함
+    - 괄호 실수를 해서 제대로 파일이 안닫힌 경우
+
+4. React Hook "use~" cannot be called at the top level. React Hooks
+must be called in a React Function Component or a custom React Hook Function 
+    - 리액트 훅은 top level 에서 선언될 수 없고, 무조건 리액트 컴포넌트 내에서 선언
+    - 괄호로 인하여 Component 간의 분리가 일어났을 확률 0
+
+5. 아무 오류도 없이 그냥 화면이 사라짐
+    - return  문의 위치에 이상이 생긴 경우
+    - 내가 만든 함수의 괄호를 잘못써서 return 문이 그 함수안에 포함되어버린 경우
+
+6. Object is not iterable ~~ / Objects are not valid as a React child~
+    - props 처리할 떄 ({속성1, 속성2}) 이런식으로 적어야하는데 그냥 (속성1, 속성2)
+    이렇게 적은 경우
+    - {}, [] 등 괄호를 잘못적은 경우
+
+7. ~. map is not a function / .filter is not a function
+    - map, filter 함수는 배열함수이므로 배열에다가만 쓸 수 있음
+    - 근데 앞에 적은 내용이 배열이 아닌 경우 나는 오류
+    - 배열에 오타가 난 경우
+    - 배열이 아닌데 내가 배열인줄 알고 쓴 경우
+
+8. 오류는 안나는데, 두번 눌러야 적절하게 실행이 되거나 내가 원하는 결과가 한템포 늦게나오는 경우
+    - uesEffect를 통해 실행되는 순서를 다시 설정
+
+9. Module Not Found : Error : Can't resolve ~~~ in ~~~
+    - 모듈 설치를 안한 경우
+    - 설치를 했는데 오타가 난 경우
+    - 설치를 했는데 덜 한 경우 => 다시 설치
+    
+
+※ 리액트 프로젝트를 주고받아야 한다면? or github 에 올라와있는 프로젝트를 다운받았다면 ?
+    - 리액트를 실행하기 위한 파일들은 node_modules 안에 존재, 엄청 무거움
+    - 내가 필요한 모듈 요소들을 간단하게 적어놓은 파일 -> package.json
+    - node_modules 이 너무 무겁다보니 github에 올리거나 주고받을 떄 얘를 제외함
+    => github 에 올라와있는 파일은 노드모듈이 없는 상태
+    => npm install 을 하면 package.json 파일을 기반으로 없는 파일들을 설치해줌
+
+ 
+※ 터미널 실행 관련
+
+만약에
+
+1) 내가 여기다가 현재 명령어를 입력할 수 없는 상태다? 
+== 현재 node 서버가 돌고있는 상태
+
+* 서버를 끄는 방법? 
+ Ctrl +C 연타 
+
+2) 만약에 명령어를 입력할 수는 있는데? 마지막 경로가 react다 
+
+cd project01
+
+- pro~ 까지만 쓰고 tab 누르면 자동완성 
+
+3) 만약에 명령어로 입력할 수 있는데 마지막 경로가 projectxx이다? 
+
+=> 바로 리액트 실행 가능한 상태 
+
+npm start
