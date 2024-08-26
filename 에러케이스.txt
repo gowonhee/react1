@@ -43,7 +43,12 @@ must be called in a React Function Component or a custom React Hook Function
     - 모듈 설치를 안한 경우
     - 설치를 했는데 오타가 난 경우
     - 설치를 했는데 덜 한 경우 => 다시 설치
-    
+
+10. No routes matched location "/~"
+    - 현재 매치되는 route 주소가 없음
+    - Route를 작성하지 않은 경우
+    - Route path를 제대로 적지 않은 경우
+
 
 ※ 리액트 프로젝트를 주고받아야 한다면? or github 에 올라와있는 프로젝트를 다운받았다면 ?
     - 리액트를 실행하기 위한 파일들은 node_modules 안에 존재, 엄청 무거움
