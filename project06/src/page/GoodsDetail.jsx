@@ -31,34 +31,36 @@ const GoodsDetail = ({goods}) => {
   return (
     <div className='goods-detail-box'>
       {/* product에 상품정보가 있다면 속성에 접근 (선택) */}
-      <div className='goods-detail-box-thumb'>
+      {product && <>
+        <div className='goods-detail-box-thumb'>
         <img src={product?.detail?.sub_thumb} />
-      </div>
-
-      <div className='goods-detail-box-info'>
-
-        <div className='goods-detail-title'>
-          <div className='goods-icon'>
-
-            {/* 해당 상품이 new이지 best인지 조건부 렌더링으로 출력 */}
-            {
-                    product.new
-                        ? <em className="goods-new">new</em>
-                        : product.best
-                            ? <em className="goods-best">best</em>
-                            : ""
-                }
-          </div>
-          <p className='goods-detail-name'>{product?.name}</p>
-          <p className='goods-detail-txt'>{product?.detail?.txt}</p>
-          <div className='goods-detail-price-box'>
-            <strong>{product?.price}</strong>
-            <span>원</span>
-          </div>
         </div>
 
+        <div className='goods-detail-box-info'>
+
+          <div className='goods-detail-title'>
+            <div className='goods-icon'>
+
+              {/* 해당 상품이 new이지 best인지 조건부 렌더링으로 출력 */}
+                  {
+                      product.new
+                          ? <em className="goods-new">new</em>
+                          : product.best
+                              ? <em className="goods-best">best</em>
+                              : ""
+                  }
+            </div>
+            <p className='goods-detail-name'>{product?.name}</p>
+            <p className='goods-detail-txt'>{product?.detail?.txt}</p>
+            <div className='goods-detail-price-box'>
+              <strong>{product?.price}</strong>
+              <span>원</span>
+            </div>
+          </div>
+
         <div className='goods-detail-summary'>{product?.detail?.summary}</div>
-      </div>
+      </div></>}
+      
     </div>
   )
 }
