@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route} from 'react-router-dom'
+import { Routes, Route, useParams} from 'react-router-dom'
 import Header from './components/Header';
 import Main from './page/Main';
 import GoodsDetail from './page/GoodsDetail';
@@ -13,6 +13,10 @@ function App() {
 
   const [auth, setAuth] = useState(false)
   const [goods, setGoods] = useState([])
+
+  useParams(()=>{
+
+  },[])
 
   return (
     <div>
