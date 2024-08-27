@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = ({auth, setAuth}) => {
 
-    const handleSubmit = ()=>{}
+    const nav = useNavigate()
+
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+        setAuth(true)
+        nav('/')
+    }
     
     return (
         <div className="login-box">
