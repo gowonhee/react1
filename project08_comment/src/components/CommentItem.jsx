@@ -5,10 +5,10 @@ const CommentItem = ({item}) => {
   
   return (
     <ListGroup.Item>
-    <b>{item.post}</b>
-    {"  "}|{"  "}
-    <span>작성자 : {item.writer}</span>
-</ListGroup.Item>
+      <b>{item.post}</b>
+      {"  "}|{"  "}
+      <span>작성자 : {item.writer}</span>
+    </ListGroup.Item>
   )
 }
 
