@@ -8,6 +8,7 @@ const CommentForm = () => {
   const postRef = useRef()
   const dispatch = useDispatch()
 
+
   const handlePost = ()=>{
     console.log(writerRef.current.value, postRef.current.value)
     dispatch({type : "addPost", payload : 

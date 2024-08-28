@@ -11,7 +11,7 @@ function App() {
     <div style={{ padding : '7%' }}>
       <h1 style={{ textAlign : 'center',
                    paddingBottom : '3%'
-      }}>☕안수현 안티팬카페༼ つ ◕_◕ ༽つ☕</h1>
+      }}>☕안수현 팬카페༼ つ ◕_◕ ༽つ☕</h1>
       <div>
         <SearchBox/>
         <hr/>
