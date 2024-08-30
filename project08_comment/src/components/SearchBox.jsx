@@ -1,13 +1,21 @@
 import React, { useRef } from 'react'
 import {Row, Col, Form, Button} from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { postActions } from '../redux/reducer/postSlice'
 
-const SearchBox = ({onSearch}) => {
+const SearchBox = () => {
 
   const searchRef = useRef()
+  const dispatch = useDispatch()
 
   const handleSearch = ()=>{
-    const search = searchRef.current.value;
-    onSearch(search); 
+    console.log(searchRef.current.value)
+
+    // toolkit
+    dispatch(postActions.searchKeyword(searchRef.current.value))
+
+    // Old Redux ver
+    // dispatch({type : "searchKeyword", payload : searchRef.current.value})
   }
 
   return (

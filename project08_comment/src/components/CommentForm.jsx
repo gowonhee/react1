@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import {Row, Col, FloatingLabel, Button, Form} from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import { postActions } from '../redux/reducer/postSlice'
 
 const CommentForm = () => {
 
@@ -8,15 +9,29 @@ const CommentForm = () => {
   const postRef = useRef()
   const dispatch = useDispatch()
 
-
   const handlePost = ()=>{
     console.log(writerRef.current.value, postRef.current.value)
-    dispatch({type : "addPost", payload : 
-    {
-      post : postRef.current.value,
-      writer: writerRef.current.value
-    }
-    })
+
+    //toolkit ver
+    dispatch(postActions.addPost({
+        post : postRef.current.value,
+        writer : writerRef.current.value
+    }))
+
+    // Old Redux ver
+    // dispatch({type : "addPost", payload : 
+    // {
+    //   post : postRef.current.value,
+    //   writer: writerRef.current.value
+    // }
+    // })
+
+    // Post를 전송한 후, 안에 내용을 비워줌
+    postRef.current.value = ""
+    writerRef.current.value = ""
+
+    // 내용으로 커서가 먼저 가도록 설정함
+    postRef.current.focus()
   }
 
   return (

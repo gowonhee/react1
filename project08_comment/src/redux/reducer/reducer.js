@@ -6,6 +6,9 @@ let initialState = {
 const reducer =(state = initialState, action)=>{
     if(action.type === "addPost"){
         return { ...state, post : [...state.post, action.payload]}
+    } 
+    else if(action.type === "searchKeyword"){
+        return { ...state, keyword : action.payload }
     }
 
     return { ...state }

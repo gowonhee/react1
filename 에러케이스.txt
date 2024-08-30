@@ -49,6 +49,17 @@ must be called in a React Function Component or a custom React Hook Function
     - Route를 작성하지 않은 경우
     - Route path를 제대로 적지 않은 경우
 
+11. The slice reducer for key "post" returned undefined during initialization.
+    - 만약 old redux 에서 이 오류가 난다면?
+        기본 return 값을 작성해주지 않은 것
+    - 만약 toolkit 에서 이 오류가 난다면?
+        store.js 파일에서 reducer의 이름 오류
+
+12. Cannot destructure property 'post' of '(0 , react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(...)' as it is undefined.
+    - slice 에 들어갈 필수 요소 name, initialState, reducers <- 오타
+    - 속성 이름을 꼭 맞춰줄 것
+        reducers 를 단수로 쓴다거나, initialState를 본인이 따로 지정하거나 (X)
+
 
 ※ 리액트 프로젝트를 주고받아야 한다면? or github 에 올라와있는 프로젝트를 다운받았다면 ?
     - 리액트를 실행하기 위한 파일들은 node_modules 안에 존재, 엄청 무거움
