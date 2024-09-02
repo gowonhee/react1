@@ -10,8 +10,8 @@ const TodoHome = () => {
     <div className='todo-container'>
       <h1 className='todo-tit'>📝워니의 할 일🌈🌼</h1>
       <TodoInput/>
-      <TodoList/>
-      <TodoList/>
+      <TodoList title="해야할 일" checked={false}/>
+      <TodoList title="완료된 일" checked={true}/>
     </div>
   )
 }
