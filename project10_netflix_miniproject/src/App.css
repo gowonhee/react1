@@ -1,0 +1,24 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+* {
+    font-family: Pretendard;
+  }
+
+.homeTitle{
+    height: 80vh;
+    padding-left: 2%;
+}
+
+.homeTitle h1{
+    color: white;
+    padding-top: 30%;
+    font-size: 50px;
+}
+.homeTitle h4{
+    color: white;
+    padding-top: 1%;
+}
+
+.slide{
+    background-color: black;
+    color: white;
+}
