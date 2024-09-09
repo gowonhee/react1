@@ -51,7 +51,7 @@ body{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
     padding-left: 20px;
     background-color: rgba(0,0,0,0.9);
@@ -60,4 +60,76 @@ body{
 /* 마우스를 올리면 투명도 해제 */
 .movie-card:hover .overlay{
     opacity: 1;
+}
+
+.movie-card > a{
+    color: white;
+    text-decoration: none;
+}
+
+.movie-card .overlay > .genres,
+.movie-card .overlay > .info {
+    display: flex;
+    gap: 15px;
+    /* gap : 행과 열 사이의 간격을 설정 */
+}
+
+
+/* MovieDetail.jsx */
+.movie-detail{
+    display: flex;
+    padding: 50px;
+    gap: 50px;
+}
+
+.movie-detail .poster > img {
+    width: 30vw;
+    height: 60vh;
+}
+
+.movie-detail h4 + div {
+    display: flex;
+    gap: 15px;
+    border-bottom: 3px solid white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.movie-detail .overview {
+    border-bottom: 3px solid white;
+    padding-top : 20px;
+    padding-bottom: 20px;
+}
+
+.movie-detail .genre {
+    display: flex;
+    gap : 5px;
+    padding-bottom: 5%;
+}
+
+.movie-detail .genre + h1 {
+    font-size: 3em;
+    padding-bottom: 1%;
+}
+
+/* Detail -> Review */
+.review-box {
+    border: 3px solid white ;
+    margin-bottom: 5%;
+}
+
+.review-item {
+    border: 3px dotted white;
+    margin-top: 3%;
+    padding: 2%;
+}
+
+.review-item h4 {
+    color: aqua;
+}
+
+.movie-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
