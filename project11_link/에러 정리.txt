@@ -1,0 +1,73 @@
+< HTTP 에러코드 >
+
+1. 200
+에러 없이 성공적으로 페이지를 불러오거나 데이터 전송을 완료함
+
+2. 400 (Bad Request)
+클라이언트 요청이 잘못되었거나 유효하지 않음
+
+3. 404 (Not Found)
+요청한 페이지를 찾을 수 없음
+서버 가는 도중 문제가 생긴 것
+
+- 클라이언트 : 주소 제대로 기재했는지
+- 서버 : 경로 제대로 기재했는지, get/post 방식 제대로 썼는지
+- CORS 오류 제대로 처리했는지
+    ▲ 확인해야함
+
+4. 500 (Internal Server Error)
+서버에서 처리하는 동안 오류가 생김
+= 무조건 서버에서 문제가 난 것이므로 node 터미널 콘솔창 확인할 것 
+
+=======================================================
+
+Session 처리 방법
+1) server session => express-session, session-file-store
+    -> 장점 : 보안 (벡엔드에 세션처리를 하기 때문)
+    -> 단점 : 사용 변수 O
+
+2) browser session => sessionStorage
+    -> 장점 : 사용 쉬움
+    -> 단점 : 보안
+
+=======================================================
+
+LocalStorage & sessionStorage
+- html5에서 제공하는 저장소
+- 개발자 도구 상단 메뉴 Application -> 좌측 Storage
+
+
+[ 특징 ]
+    1. LocalStorage
+    - 브라우저를 꺼도 데이터가 유지
+    - 문자열만 저장 가능한 쿠키와 달리 객체형도 저장 가능
+    - 시간제한, 개수제한이 있는 쿠키와 달리 제한이 X
+
+    2. sessionStorage
+    - 세션(프로세스, 탭, 브라우저) 이 종료될때까지 지속되는 Storage
+    - LocalStorage는 소멸 타이밍이 없지만 sessionStorage는 세션 종료시 소멸
+    - 같은 브라우저일지라도 다른 탭이면 다른 세션으로 정의
+
+    3. 공통 특징
+    - 보안에 불리하기 때문에 비밀번호, 계좌번호 저장은 절대 XXX
+    - ID, 닉네임 -> 현업에서는 보통 암호화
+
+[ 사용법 ]
+    1. LocalStorage
+        - 저장 : localStorage.setItem('key', 'value')
+        - 가져오기 : localStorage.getItem('key')
+        - 삭제 : localStorage.removeItem('key')
+        - 모두 삭제 : localStorage.clear() // 키값 뿐만아니라 모든 스토리지가 싹다 사라지는 방법
+
+        - 객체 형식으로 저장 : localStorage.setItem('key', JSON.stringify(Obj))
+        - 객체 형식으로 저장된 storage 사용 : JSON.parse(localStorage.getItem('key')) // Object 형식으로 주고받는 방법
+
+
+    2. SessionStorage
+        - 저장 : sessionStorage.setItem('key', 'value')
+        - 가져오기 : sessionStorage.getItem('key')
+        - 삭제 : sessionStorage.removeItem('key')
+        - 모두 삭제 : sessionStorage.clear() // 키값 뿐만아니라 모든 스토리지가 싹다 사라지는 방법
+
+        - 객체 형식으로 저장 : sessionStorage.setItem('key', JSON.stringify(Obj))
+        - 객체 형식으로 저장된 storage 사용 : JSON.parse(sessionStorage.getItem('key')) // Object 형식으로 주고받는 방법
