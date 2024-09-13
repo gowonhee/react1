@@ -13,3 +13,20 @@
   color: rgb(50, 125, 190);
   font-weight: bold;
 }
+
+/* Login.jsx */
+.loginForm{
+  margin: 8% 20% 0% 20%;
+  padding-left: 15%;
+  padding-right: 15%;
+
+}
+.loginForm h1{
+  margin-bottom: 5%;
+}
+.loginForm input{
+  margin-bottom: 2%;
+}
+.loginForm button{
+  margin-top: 5%;
+}
