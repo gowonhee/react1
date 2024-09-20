@@ -16,7 +16,7 @@
 
 /* Login.jsx */
 .loginForm{
-  margin: 8% 20% 0% 20%;
+  margin: 5% 20% 0% 20%;
   padding-left: 15%;
   padding-right: 15%;
 
@@ -28,5 +28,46 @@
   margin-bottom: 2%;
 }
 .loginForm button{
+  margin-top: 3%;
+}
+
+
+.joinContainer{
+  margin: 5% 15% 0% 15%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.joinContainer span{
+  margin-bottom: 3%;
+}
+.joinContainer input{
+  margin-bottom: 2%;
+}
+.joinContainer button{
   margin-top: 5%;
+}
+
+/* aboutMeForm */
+.aboutMeForm{
+  height: 60vh;
+}
+.profileImg{
+  width: 10.5%;
+  height: 10.5%;
+  border-radius: 90px;
+  border: 3.5px solid rgb(202, 202, 202);
+}
+.aboutContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.aboutText{
+  /* width: 100vw; */
+}
+
+/* archiveForm */
+.archiveForm{
+  background: linear-gradient(45deg,#D3CCE3, #e3dcee);
+  height: 60vh;
 }
