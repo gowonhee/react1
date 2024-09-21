@@ -4,6 +4,12 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
 
 *{
   font-family: 'Pretendard-Regular';
@@ -49,25 +55,35 @@
 
 /* aboutMeForm */
 .aboutMeForm{
-  height: 60vh;
+  height: 70vh;
+  padding-bottom: 5%;
 }
 .profileImg{
-  width: 10.5%;
-  height: 10.5%;
-  border-radius: 90px;
-  border: 3.5px solid rgb(202, 202, 202);
+  width: 15vw;
+  height: auto;
+  border-radius: 180em;
+  border: 0.35em solid rgb(202, 202, 202);
 }
 .aboutContent{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 .aboutText{
-  /* width: 100vw; */
+  padding-left: 10%;
+}
+.Gowonhee {
+  font-family: "Paperlogy-8ExtraBold";
+  margin-bottom: 10%;
+  font-size: x-large;
+}
+.aboutMe-Text{
+  margin-top: 5%;
 }
 
 /* archiveForm */
 .archiveForm{
   background: linear-gradient(45deg,#D3CCE3, #e3dcee);
-  height: 60vh;
+  height: 70vh;
 }
