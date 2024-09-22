@@ -32,7 +32,11 @@ const Introduce = () => {
         <div className='aboutMe-Text'>Archive</div>
         <p className='aboutLine'>-----</p>
         <div className='link-div'>
-          <div className='otherSite'><FontAwesomeIcon icon={faGithub} /></div>
+          <div className='otherSite'><FontAwesomeIcon icon={faGithub} size="2x"/>
+            <p>Github</p>
+            <br />
+            <a href="https://github.com/gowonhee">github.com/gowonhee</a>
+          </div>
           <div className='otherSite'>NaverBlog</div>
           <div className='otherSite'>Notion</div>
         </div>
