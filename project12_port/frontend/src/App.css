@@ -97,6 +97,9 @@
   font-size: large;
   color: gray;
 }
+.badge img{
+  margin: 1% 1% 0% 0%;
+}
 .aboutMe-Text{
   margin-top: 5%;
   font-family: 'TmonMonsori';
